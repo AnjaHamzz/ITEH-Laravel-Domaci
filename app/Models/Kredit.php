@@ -10,6 +10,14 @@ class Kredit extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'iznos',
+        'valuta',
+        'kamata',
+        'broj_rata',
+        'klijent_id'
+    ];
+
     public function klijent()
     {
         return $this->belongsTo(Klijent::class);

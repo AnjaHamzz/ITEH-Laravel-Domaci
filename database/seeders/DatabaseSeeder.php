@@ -13,6 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $bankaSeeder = new BankaSeeder;
+        $klijentSeeder = new KlijentSeeder;
+        $kreditSeeder = new KreditSeeder;
+
+        $kreditSeeder->run();
+        $klijentSeeder->run();
+        $bankaSeeder->run();
     }
 }

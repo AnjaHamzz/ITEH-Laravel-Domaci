@@ -11,6 +11,14 @@ class Klijent extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime_prezime',
+        'racun',
+        'stanje',
+        'banka_id',
+    ];
+
+
     public function banka()
     {
         return $this->belongsTo(Banka::class);

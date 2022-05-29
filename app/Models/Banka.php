@@ -10,6 +10,14 @@ class Banka extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'naziv',
+        'sediste',
+        'broj_zaposlenih',
+        'broj_filijala',
+    ];
+
+
     public function klijenti()
     {
         return $this->hasMany(Klijent::class);
